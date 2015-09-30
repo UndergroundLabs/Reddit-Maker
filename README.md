@@ -19,7 +19,7 @@ Please ensure you have the following Python packages installed
 
 Clone the repo
 
-    git clone ...
+    git clone git@github.com:UndergroundLabs/Reddit-Maker.git
 
 Usage
 -----
