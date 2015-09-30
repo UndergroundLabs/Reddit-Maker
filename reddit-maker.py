@@ -67,7 +67,7 @@ def comment(session, url, comment):
     r = session.post("https://www.reddit.com/api/comment", data={
         'thing_id': j['cur_link'],
         'text': comment,
-        'r': 'trapproduction',
+        'r': '',
         'uh': j['modhash'],
         'renderstyle': 'html'
     })
