@@ -26,7 +26,6 @@ def register(session, username, password):
         'api_type': 'json'
     })
     
-    print r.text    
     return json.loads(r.text)['json']['errors']
 
 def upvote(session, url):
@@ -49,7 +48,7 @@ def upvote(session, url):
         'uh': j['modhash'],
         'renderstyle': 'html'
     })
-    print r.text
+    
     return (r.status_code == 200)
 
 def comment(session, url, comment):
@@ -63,7 +62,7 @@ def comment(session, url, comment):
 
     innerJS = d("#config").outerHtml()[51:-10]
     j = json.loads(innerJS)
-
+    
     r = session.post("https://www.reddit.com/api/comment", data={
         'thing_id': j['cur_link'],
         'text': comment,
@@ -106,11 +105,9 @@ if __name__ == "__main__":
     # Attempt to upvote
     if not upvote(session, args.url):
         print "Upvote Failed!"
-        sys.exit(1)
     
     # Attempt to leave a comment
     if not comment(session, args.url, args.comment):
         print "Comment Failed!"
-        sys.exit(1)
 
     print username + ":" + password
