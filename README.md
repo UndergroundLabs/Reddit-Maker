@@ -3,7 +3,7 @@ Reddit Maker
 
 This script will create an account on Reddit, and attempt to upvote, and comment on a Reddit thread.
 
-I created this script to test if I could mass create accounts from different IP addresses and use them to artifically manipulate upvotes.
+I created this script to test if I could mass create accounts from different IP addresses and use them to artifically manipulate upvotes. Vote manipulation DOES NOT work.
 
 I have now released it purely for others to learn from.
 
